@@ -11,12 +11,13 @@ let package = Package(
     products: [
         .library(
             name: "MLXUtilsLibrary",
+            type: .dynamic,
             targets: ["MLXUtilsLibrary"]
         ),
     ],
     dependencies: [
         .package(url: "https://github.com/weichsel/ZIPFoundation.git", .upToNextMajor(from: "0.9.0")),
-        .package(url: "https://github.com/ml-explore/mlx-swift", from: "0.30.3")
+        .package(url: "https://github.com/leif-feddersen/mlx-swift.git", branch: "dynamic-fix")
     ],
     targets: [
         .target(
