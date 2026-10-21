@@ -9,9 +9,9 @@ let package = Package(
       .iOS(.v18), .macOS(.v15)
     ],
     products: [
+        // Automatic linkage prevents a second MLX image beside Kokoro and Misaki.
         .library(
             name: "MLXUtilsLibrary",
-            type: .dynamic,
             targets: ["MLXUtilsLibrary"]
         ),
     ],
